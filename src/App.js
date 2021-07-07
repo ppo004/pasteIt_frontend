@@ -3,14 +3,16 @@ import "./App.css";
 import HomePage from "./screens/HomePage";
 import LandingPage from "./screens/LandingPage";
 import ErrorPage from "./screens/ErrorPage";
+import AuthScreen from "./screens/AuthScreen";
 function App() {
   return (
     <Router>
       <main>
         <Switch>
           <Route path="/home" component={HomePage} />
+          <Route path="/auth" component={AuthScreen} />
           <Route path="/" component={LandingPage} />
-          <Route component={ErrorPage} />
+          <Route path="*" component={ErrorPage} />
         </Switch>
       </main>
     </Router>
